@@ -44,21 +44,22 @@ const Table = () => {
       <main className="table-header">
         <ul>
           <li>Client</li>
-          <li>Type</li>
-          <li>ETA</li>
-          <li>{''}</li>
+          <li className="hidden">Type</li>
+          <li className="hidden">ETA</li>
+          <li className="hidden">{''}</li>
         </ul>
       </main>
       <main className="table-body">
         {data.map((data) => (
           <ul key={data.id}>
             <li>{data.client}</li>
-            <li className="li-type">{data.type}</li>
+            <li className="li-type hidden">{data.type}</li>
             <li className="li-ETA">
-              <img src={data.ETA} alt="" />
+              <img src={data.ETA} alt="ETA" />
             </li>
             <li>
               <img
+                className="hidden"
                 src={data.trash}
                 alt="trash can"
                 onClick={() => handleDelete(data.id)}
