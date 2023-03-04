@@ -248,7 +248,7 @@ ul {
 /* Modal */
 .modal__header {
   position: fixed;
-  top: 30%;
+  top: 42%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 450px;

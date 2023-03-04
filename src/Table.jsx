@@ -1,8 +1,9 @@
 import notification from './assets/Notification.png';
 import loading from './assets/Loading.png';
 import trash from './assets/Trash.png';
+import { useState } from 'react';
 
-const data = [
+const userInfo = [
   {
     id: 1,
     client: 'Joe Bellion',
@@ -18,7 +19,18 @@ const data = [
     trash: trash,
   },
 ];
+
 const Table = () => {
+  const [data, setData] = useState(userInfo);
+
+  const handleDelete = (id) => {
+    setData((items) => {
+      return items.filter((item) => {
+        return item.id !== id;
+      });
+    });
+  };
+
   return (
     <article className="table">
       <header className="notification">
@@ -46,7 +58,11 @@ const Table = () => {
               <img src={data.ETA} alt="" />
             </li>
             <li>
-              <img src={data.trash} alt="" />
+              <img
+                src={data.trash}
+                alt="trash can"
+                onClick={() => handleDelete(data.id)}
+              />
             </li>
             <li>{''}</li>
           </ul>
