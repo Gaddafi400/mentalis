@@ -26,8 +26,8 @@ html {
   --white: #fff;
 
   /* fonts  */
-  --headingFont: 'Roboto', sans-serif;
-  --bodyFont: 'Nunito', sans-serif;
+  --headingFont: 'Montserrat', sans-serif;
+  --bodyFont: 'Montserrat', sans-serif;
   --small-text: 0.875rem;
   --extra-small-text: 0.7em;
   /* rest of the vars */
@@ -45,8 +45,6 @@ html {
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
 body {
@@ -248,18 +246,20 @@ ul {
 /* Modal */
 .modal__header {
   position: fixed;
-  top: 42%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   height: 450px;
   width: 640px;
   background: #ffffff;
   border-radius: 16px;
+  border: 2px solid var(--grey-100);
   transition: var(--transition);
 }
 .modal__header img {
   object-fit: cover;
-  width: 6%;
+  width: 7%;
+  height: 7%;
   position: absolute;
   top: 15px;
   right: 7px;
@@ -350,4 +350,112 @@ ul {
 }
 .table-body ul .li-ETA {
   margin-left: 15rem;
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) {
+  .main-header {
+    margin: 4rem;
+  }
+  .table {
+    margin: 4rem;
+  }
+  .hidden {
+    display: none;
+  }
+  .main-header__content img {
+    width: 4%;
+    height: 4%;
+  }
+  .notification-img {
+    width: 4.8%;
+    height: 4.8%;
+  }
+  .modal__header img {
+    object-fit: cover;
+    width: 6%;
+    height: 6%;
+  }
+  .table-body ul .li-ETA {
+    margin-left: 6rem;
+  }
+  .table-body ul .li-ETA img {
+    width: 160px;
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 550px) {
+  .hidden {
+    display: none;
+  }
+  .main-header {
+    margin: 1rem;
+  }
+  .main-header__content_upload h3 {
+    font-size: 18px;
+  }
+  .main-header__content h1 {
+    font-size: 18px;
+  }
+  .main-header__content img {
+    width: 7%;
+    height: 7%;
+  }
+  .notification-img {
+    width: 9%;
+    height: 9%;
+  }
+  .notification span {
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .table {
+    margin: 1rem;
+  }
+  .table-body ul {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .modal__header {
+    top: 50%;
+    height: 500px;
+    width: 370px;
+  }
+  .modal__header img {
+    object-fit: cover;
+    width: 8%;
+    height: 8%;
+  }
+  .modal__header header h1 {
+    font-size: 16px;
+  }
+  .modal__header header p {
+    font-size: 14px;
+    padding: 1rem;
+  }
+  .form {
+    padding: 2rem 2rem;
+  }
+  .form-input,
+  .form-textarea {
+    padding: 0.5rem 0.75rem;
+  }
+  .table-body ul .li-ETA {
+    margin-left: 4rem;
+  }
+  .table-body ul .li-ETA img {
+    width: 160px;
+  }
+  .btn {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .modal__header {
+    height: 470px;
+    width: 350px;
+  }
 }
