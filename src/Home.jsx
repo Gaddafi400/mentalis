@@ -1,6 +1,6 @@
 import help from './assets/Help.png';
 
-const Home = () => {
+const Home = ({ modal }) => {
   return (
     <>
       <header className="main-header">
@@ -10,7 +10,9 @@ const Home = () => {
         </div>
         <div className="main-header__content_upload">
           <h3>Upload your session’s recordings</h3>
-          <button className="btn btn-upload">Upload</button>
+          <button onClick={modal} className="btn btn-upload">
+            Upload
+          </button>
         </div>
       </header>
     </>

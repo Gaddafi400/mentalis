@@ -1,16 +1,24 @@
 import close from './assets/Close.png';
 
-const Modal = () => {
+const Modal = ({ handleClose }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
   return (
     <>
       <div className="modal__header">
-        <img src={close} alt="close button" className="close-button" />
+        <img
+          src={close}
+          alt="close button"
+          onClick={handleClose}
+          className="close-button"
+        />
         <header>
           <h1>Complete Your Upload</h1>
           <p>Fill in the details below to complete your upload</p>
         </header>
 
-        <form className="form">
+        <form className="form" onSubmit={handleSubmit}>
           <div className="form-row">
             <select className="form-input">
               <option className="option" value="1">
