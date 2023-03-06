@@ -386,6 +386,12 @@ ul {
 
 /* mobile */
 @media screen and (max-width: 550px) {
+  .navbar {
+    justify-content: center;
+  }
+  .logo {
+    margin: 0;
+  }
   .hidden {
     display: none;
   }
